@@ -97,3 +97,4 @@ C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Gene
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.pdb
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.genruntimeconfig.cache
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\ref\Waveform Generator.dll
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform_Generator.Properties.Resources.resources
