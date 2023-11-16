@@ -3,6 +3,9 @@ using Waveform_Generator.Entities;
 using Waveform_Generator.Repositories;
 using System;
 using System.Windows.Forms;
+using System.Configuration;
+using Microsoft.Extensions.Configuration;
+using Waveform_Generator.Database;
 
 namespace Waveform_Generator
 {
@@ -10,16 +13,19 @@ namespace Waveform_Generator
     {
         // constructor
         private ProjectRepository projectRepository;
+        private readonly DatabaseManager _databaseManager;
 
         // starting point for the project form class
-        public ProjectForm()
+        public ProjectForm(DatabaseManager databaseManager)
         {
             InitializeComponent();
 
-            // Provide your actual database connection string here
-            string connectionString = "server=localhost;userid=root;password=3142CCmm/3142;database=waveform_generator_db";
+            //dataGridViewProjects.CellContentClick += DataGridViewProjects_CellContentClick;
+
+            _databaseManager = databaseManager;
 
             // Instantiate ProjectRepository with the connection string
+            string connectionString = _databaseManager.GetConnectionString();
             projectRepository = new ProjectRepository(connectionString);
 
             LoadProjects();
@@ -32,7 +38,7 @@ namespace Waveform_Generator
         }
 
         // when add project button is clicked
-        private void buttonAddProject_Click(object sender, EventArgs e)
+        private void buttonCreateProject_Click(object sender, EventArgs e)
         {
             // Show an input box to get the new project name
             string projectName = Microsoft.VisualBasic.Interaction.InputBox("Enter the new project name:", "Create New Project");
@@ -40,23 +46,28 @@ namespace Waveform_Generator
             // Check if the user entered a project name
             if (!string.IsNullOrWhiteSpace(projectName))
             {
-                // Process the new project name (e.g., create a new project with the given name)
-                MessageBox.Show($"New project created: {projectName}", "Success");
-
                 Project newProject = new Project
                 {
                     ProjectName = projectName,
                 };
 
-                projectRepository.AddProject(newProject);
+                bool success = projectRepository.CreateProject(newProject);
+
+                if (success)
+                {
+                    MessageBox.Show($"New project created: {projectName}", "Success");
+                    // Reload projects view
+                    LoadProjects();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to create a new project.", "Error");
+                }
             }
             else
             {
                 MessageBox.Show("Project name cannot be empty.", "Error");
             }
-
-            // load projects view
-            LoadProjects();
         }
 
         // when update project name button is clicked

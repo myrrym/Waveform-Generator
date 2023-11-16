@@ -11,11 +11,10 @@ using Org.BouncyCastle.Math.EC;
 
 namespace Waveform_Generator.Repositories
 {
-    internal class ProjectRepository
+    public class ProjectRepository
     {
         // use mysql connection
         private readonly string connectionString; // Set your database connection string here
-
         public ProjectRepository(string connectionString)
         {
             this.connectionString = connectionString;
@@ -25,17 +24,40 @@ namespace Waveform_Generator.Repositories
         private List<Project> projects = new List<Project>();
 
         // add project method
-        public void AddProject(Project project)
+        public bool CreateProject(Project project)
         {
-            project.ProjectId = projects.Count + 1;
-            projects.Add(project);
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string insertQuery = "INSERT INTO projects (project_name, project_type, date_modified) VALUES (@ProjectName, @ProjectType, @DateModified)";
+                    using (MySqlCommand cmd = new MySqlCommand(insertQuery, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@ProjectName", project.ProjectName);
+                        cmd.Parameters.AddWithValue("@ProjectType", "Sine Wave");
+                        cmd.Parameters.AddWithValue("@DateModified", DateTime.Now);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions (log, show error message, etc.)
+                Console.WriteLine($"Error: {ex.Message}");
+                return false;
+            }
         }
 
         // list all projects method
         public List<Project> GetProjects()
         {
             List<Project> projects = new List<Project>();
-            
+
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
@@ -45,14 +67,14 @@ namespace Waveform_Generator.Repositories
                 using (MySqlCommand command = new MySqlCommand(sql, connection))
                 using (MySqlDataReader reader = command.ExecuteReader())
                 {
-                    while(reader.Read())
+                    while (reader.Read())
                     {
                         Project project = new Project
                         {
-                            ProjectId = reader.GetInt32(reader.GetOrdinal("project_id")),
-                            ProjectName = reader.GetString(reader.GetOrdinal("project_name")),
-                            ProjectType = reader.GetString(reader.GetOrdinal("project_type")),
-                            DateModified = reader.GetDateTime(reader.GetOrdinal("date_modified")),
+                            ProjectId = reader.IsDBNull(reader.GetOrdinal("project_id")) ? 0 : reader.GetInt32(reader.GetOrdinal("project_id")),
+                            ProjectName = reader.IsDBNull(reader.GetOrdinal("project_name")) ? string.Empty : reader.GetString(reader.GetOrdinal("project_name")),
+                            ProjectType = reader.IsDBNull(reader.GetOrdinal("project_type")) ? string.Empty : reader.GetString(reader.GetOrdinal("project_type")),
+                            DateModified = reader.IsDBNull(reader.GetOrdinal("date_modified")) ? DateTime.MinValue : reader.GetDateTime(reader.GetOrdinal("date_modified")),
                         };
 
                         projects.Add(project);
