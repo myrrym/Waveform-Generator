@@ -42,7 +42,7 @@ namespace Waveform_Generator.Main
             //Form1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Application.Run(new Form1());
+            //Application.Run(new Form1());
 
             Application.Run(new ProjectForm(databaseManager));
         }
