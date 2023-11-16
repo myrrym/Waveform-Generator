@@ -1,0 +1,17 @@
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Waveform Generator.exe
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Waveform Generator.deps.json
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Waveform Generator.runtimeconfig.json
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Waveform Generator.dll
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Waveform Generator.pdb
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.csproj.AssemblyReference.cache
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform_Generator.Form1.resources
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.csproj.GenerateResource.cache
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.AssemblyInfoInputs.cache
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.AssemblyInfo.cs
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.dll
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\refint\Waveform Generator.dll
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.pdb
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.genruntimeconfig.cache
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\ref\Waveform Generator.dll
