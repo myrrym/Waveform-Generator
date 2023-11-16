@@ -117,12 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Update.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Edit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Edit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EQAACxEBf2RfkQAAAJRJREFUSEvtkuEJwyAQhR3DeEbdtCN0hHaTjJARMkJGSHztHVxCKSR4//zggRyP
+        7xB1HXOI0jtS3ijkuVR43AaRS0bKS7MlZ7nKxJX7/JF/wrV7KPmqpRIa0pOr11EPunhfSgzlcZCH9OLq
+        dc5yzPCgY/zexEZef02Xd/kRUzmABDGRA1mAc3M5kAU6zeTAVN75jXM7HRmNUVjxwkYAAAAASUVORK5C
+        YII=
+</value>
+  </data>
   <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="Delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EgAACxIB0t1+/AAAAH1JREFUSEvtjcsNgCAQRKlDQOhMO7cESvCTrLfF5yTGePAlc5jAvA0/j5BiWb3Y
+        s4YnUmKaPt5IiWmukT7vqP/fP6B2hATUERJQR0hAHSEBdYQE1BESUEdIQB0hAXVEHXzvQE6lnaO7iUNZ
+        bM7kWOdj4Ik6aWOsk81/FELYAH8fy4fPsX9XAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="projectBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

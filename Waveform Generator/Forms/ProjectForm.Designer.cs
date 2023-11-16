@@ -29,37 +29,41 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            buttonAddProject = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProjectForm));
+            buttonCreateProject = new Button();
             dataGridViewProjects = new DataGridView();
             projectBindingSource = new BindingSource(components);
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             nameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             typeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             dateModifiedDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            Update = new DataGridViewButtonColumn();
-            Delete = new DataGridViewButtonColumn();
+            Edit = new DataGridViewImageColumn();
+            Delete = new DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProjects).BeginInit();
             ((System.ComponentModel.ISupportInitialize)projectBindingSource).BeginInit();
             SuspendLayout();
             // 
-            // buttonAddProject
+            // buttonCreateProject
             // 
-            buttonAddProject.Location = new Point(12, 12);
-            buttonAddProject.Name = "buttonAddProject";
-            buttonAddProject.Size = new Size(144, 23);
-            buttonAddProject.TabIndex = 0;
-            buttonAddProject.Text = "Create New Project";
-            buttonAddProject.UseVisualStyleBackColor = true;
-            buttonAddProject.Click += buttonAddProject_Click;
+            buttonCreateProject.Location = new Point(12, 12);
+            buttonCreateProject.Name = "buttonCreateProject";
+            buttonCreateProject.Size = new Size(144, 23);
+            buttonCreateProject.TabIndex = 0;
+            buttonCreateProject.Text = "Create New Project";
+            buttonCreateProject.UseVisualStyleBackColor = true;
+            buttonCreateProject.Click += buttonCreateProject_Click;
             // 
             // dataGridViewProjects
             // 
+            dataGridViewProjects.AllowUserToAddRows = false;
+            dataGridViewProjects.AllowUserToDeleteRows = false;
             dataGridViewProjects.AutoGenerateColumns = false;
             dataGridViewProjects.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewProjects.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, nameDataGridViewTextBoxColumn, typeDataGridViewTextBoxColumn, dateModifiedDataGridViewTextBoxColumn, Update, Delete });
+            dataGridViewProjects.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, nameDataGridViewTextBoxColumn, typeDataGridViewTextBoxColumn, dateModifiedDataGridViewTextBoxColumn, Edit, Delete });
             dataGridViewProjects.DataSource = projectBindingSource;
             dataGridViewProjects.Location = new Point(0, 41);
             dataGridViewProjects.Name = "dataGridViewProjects";
+            dataGridViewProjects.ReadOnly = true;
             dataGridViewProjects.RowTemplate.Height = 25;
             dataGridViewProjects.Size = new Size(1023, 411);
             dataGridViewProjects.TabIndex = 1;
@@ -74,36 +78,46 @@
             idDataGridViewTextBoxColumn.DataPropertyName = "ProjectId";
             idDataGridViewTextBoxColumn.HeaderText = "Project Id";
             idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nameDataGridViewTextBoxColumn
             // 
             nameDataGridViewTextBoxColumn.DataPropertyName = "ProjectName";
             nameDataGridViewTextBoxColumn.HeaderText = "Project Name";
             nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // typeDataGridViewTextBoxColumn
             // 
             typeDataGridViewTextBoxColumn.DataPropertyName = "ProjectType";
             typeDataGridViewTextBoxColumn.HeaderText = "Project Type";
             typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            typeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dateModifiedDataGridViewTextBoxColumn
             // 
             dateModifiedDataGridViewTextBoxColumn.DataPropertyName = "DateModified";
             dateModifiedDataGridViewTextBoxColumn.HeaderText = "Date Modified";
             dateModifiedDataGridViewTextBoxColumn.Name = "dateModifiedDataGridViewTextBoxColumn";
+            dateModifiedDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Update
+            // Edit
             // 
-            Update.HeaderText = "Update";
-            Update.Name = "Update";
-            Update.Resizable = DataGridViewTriState.True;
-            Update.SortMode = DataGridViewColumnSortMode.Automatic;
+            Edit.HeaderText = "Edit";
+            Edit.Image = (Image)resources.GetObject("Edit.Image");
+            Edit.Name = "Edit";
+            Edit.ReadOnly = true;
+            Edit.Resizable = DataGridViewTriState.True;
+            Edit.SortMode = DataGridViewColumnSortMode.Automatic;
+            Edit.ToolTipText = "Edit the project name.";
             // 
             // Delete
             // 
             Delete.HeaderText = "Delete";
+            Delete.Image = (Image)resources.GetObject("Delete.Image");
             Delete.Name = "Delete";
+            Delete.ReadOnly = true;
+            Delete.Resizable = DataGridViewTriState.True;
             // 
             // ProjectForm
             // 
@@ -111,7 +125,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1023, 451);
             Controls.Add(dataGridViewProjects);
-            Controls.Add(buttonAddProject);
+            Controls.Add(buttonCreateProject);
             Name = "ProjectForm";
             Text = "Waveform Generator";
             Load += Form1_Load;
@@ -122,17 +136,17 @@
 
         #endregion
 
-        private Button buttonAddProject;
+        private Button buttonCreateProject;
         private DataGridView dataGridViewProjects;
         private DataGridViewTextBoxColumn ProjectName;
         private DataGridViewTextBoxColumn Type;
         private DataGridViewTextBoxColumn DateModified;
-        private DataGridViewButtonColumn Update;
-        private DataGridViewButtonColumn Delete;
+        private BindingSource projectBindingSource;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dateModifiedDataGridViewTextBoxColumn;
-        private BindingSource projectBindingSource;
+        private DataGridViewImageColumn Edit;
+        private DataGridViewImageColumn Delete;
     }
 }
