@@ -288,18 +288,55 @@ namespace Waveform_Generator
             // Clear the display
             graphic.Clear(Color.White);
 
+            // Calculate the offset to center the waveform vertically
+            float yOffset = Height / 2f;
+
+            // Find the maximum amplitude in the loaded data
+            float maxAmplitude = Math.Max(Math.Abs(data.Max(p => p.Y)), Math.Abs(data.Min(p => p.Y)));
+
+            // Scale factor to normalize the amplitude of loaded data with the black lines
+            float scaleFactor = amplitude / maxAmplitude;
+
+            // Draw the grid lines
+            for (int i = 0; i < Height / 50; i++)
+            {
+                float gridY = yOffset + (i - Height / 100) * 50; // Adjust the calculation here
+
+                PointF A = new PointF(0, gridY);
+                PointF B = new PointF(Width, gridY);
+
+                Pen pen = new Pen(Color.Black, 1);
+
+                if (i == 6) pen.Width = 3;
+
+                // Ensure the line stays within the PictureBox bounds
+                if (B.Y > Height)
+                {
+                    B.Y = Height;
+                }
+
+                graphic.DrawLine(pen, A, B);
+            }
+
             // Draw the loaded data
             for (int i = 0; i < recordedData.Count - 1; i++)
             {
                 PointF currentPoint = recordedData[i];
                 PointF nextPoint = recordedData[i + 1];
 
+                // Offset the y-coordinate to center the waveform vertically
+                currentPoint.Y = yOffset - currentPoint.Y * scaleFactor;
+                nextPoint.Y = yOffset - nextPoint.Y * scaleFactor;
+
+                // Draw the blue waveform
                 graphic.DrawLine(new Pen(Color.Blue, 1), currentPoint, nextPoint);
             }
 
             // Update the display
             pictureBox1.Image = bitmap;
         }
+
+
 
         private void buttonToggleWave_Click(object sender, EventArgs e)
         {
