@@ -1,10 +1,7 @@
 # Ignore Visual Studio files
 .vscode/
 .vs2019/
-<<<<<<< HEAD
-=======
 .vs
->>>>>>> ChunKeat
 bin/
 obj/
 *.user
