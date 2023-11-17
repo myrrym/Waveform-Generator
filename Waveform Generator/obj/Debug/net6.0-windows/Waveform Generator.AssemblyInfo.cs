@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Waveform Generator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42b69b7d67fdf4b71fe6c735d26e5c7dd87a41e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Waveform Generator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Waveform Generator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,10 +1,7 @@
 # Ignore Visual Studio files
 .vscode/
 .vs2019/
-<<<<<<< HEAD
-=======
 .vs
->>>>>>> ChunKeat
 bin/
 obj/
 *.user
@@ -12,6 +9,8 @@ obj/
 *.userprefs
 *.sln.docstates
 *.cache
+.target
+.vscdx
 
 # Ignore NuGet packages
 packages/
