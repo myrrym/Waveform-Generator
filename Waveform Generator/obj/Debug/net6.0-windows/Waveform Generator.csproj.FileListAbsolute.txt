@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\lux\Desktop\maomao stuff\222222 work\trainplace\capstone\capstone project\Waveform Generator\bin\Debug\net6.0-windows\Waveform Generator.exe
 C:\Users\lux\Desktop\maomao stuff\222222 work\trainplace\capstone\capstone project\Waveform Generator\bin\Debug\net6.0-windows\Waveform Generator.deps.json
 C:\Users\lux\Desktop\maomao stuff\222222 work\trainplace\capstone\capstone project\Waveform Generator\bin\Debug\net6.0-windows\Waveform Generator.runtimeconfig.json
@@ -48,8 +47,6 @@ C:\Users\lux\Desktop\maomao stuff\222222 work\trainplace\capstone\capstone proje
 C:\Users\lux\Desktop\maomao stuff\222222 work\trainplace\capstone\capstone project\Waveform Generator\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\lux\Desktop\maomao stuff\222222 work\trainplace\capstone\capstone project\Waveform Generator\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\lux\Desktop\maomao stuff\222222 work\trainplace\capstone\capstone project\Waveform Generator\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
-=======
->>>>>>> ChunKeat
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Waveform Generator.exe
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Waveform Generator.deps.json
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Waveform Generator.runtimeconfig.json
