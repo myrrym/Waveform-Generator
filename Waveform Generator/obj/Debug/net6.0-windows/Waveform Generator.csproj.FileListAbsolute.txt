@@ -103,3 +103,6 @@ C:\Users\lux\Desktop\maomao stuff\222222 work\trainplace\capstone\capstone proje
 C:\Users\lux\Desktop\maomao stuff\222222 work\trainplace\capstone\capstone project\Waveform Generator\obj\Debug\net6.0-windows\Waveform_Generator.Form1.resources
 C:\Users\lux\Desktop\maomao stuff\222222 work\trainplace\capstone\capstone project\Waveform Generator\obj\Debug\net6.0-windows\Waveform_Generator.Properties.Resources.resources
 C:\Users\lux\Desktop\maomao stuff\222222 work\trainplace\capstone\capstone project\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.sourcelink.json
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\appsettings.json
