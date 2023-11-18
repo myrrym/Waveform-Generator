@@ -32,14 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProjectForm));
             buttonCreateProject = new Button();
             dataGridViewProjects = new DataGridView();
-            projectBindingSource = new BindingSource(components);
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             nameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             typeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             dateModifiedDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             Edit = new DataGridViewImageColumn();
             Delete = new DataGridViewImageColumn();
+            projectBindingSource1 = new BindingSource(components);
+            projectBindingSource = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)dataGridViewProjects).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)projectBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)projectBindingSource).BeginInit();
             SuspendLayout();
             // 
@@ -67,57 +69,73 @@
             dataGridViewProjects.RowTemplate.Height = 25;
             dataGridViewProjects.Size = new Size(1023, 411);
             dataGridViewProjects.TabIndex = 1;
-            dataGridViewProjects.CellContentClick += buttonUpdateProjectName_Click;
-            // 
-            // projectBindingSource
-            // 
-            projectBindingSource.DataSource = typeof(Entities.Project);
+            dataGridViewProjects.CellContentClick += dataGridViewProjects_CellContentClick;
             // 
             // idDataGridViewTextBoxColumn
             // 
+            idDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             idDataGridViewTextBoxColumn.DataPropertyName = "ProjectId";
             idDataGridViewTextBoxColumn.HeaderText = "Project Id";
             idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             idDataGridViewTextBoxColumn.ReadOnly = true;
+            idDataGridViewTextBoxColumn.Width = 82;
             // 
             // nameDataGridViewTextBoxColumn
             // 
+            nameDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             nameDataGridViewTextBoxColumn.DataPropertyName = "ProjectName";
             nameDataGridViewTextBoxColumn.HeaderText = "Project Name";
             nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             nameDataGridViewTextBoxColumn.ReadOnly = true;
+            nameDataGridViewTextBoxColumn.Width = 104;
             // 
             // typeDataGridViewTextBoxColumn
             // 
+            typeDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             typeDataGridViewTextBoxColumn.DataPropertyName = "ProjectType";
             typeDataGridViewTextBoxColumn.HeaderText = "Project Type";
             typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
             typeDataGridViewTextBoxColumn.ReadOnly = true;
+            typeDataGridViewTextBoxColumn.Width = 96;
             // 
             // dateModifiedDataGridViewTextBoxColumn
             // 
+            dateModifiedDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dateModifiedDataGridViewTextBoxColumn.DataPropertyName = "DateModified";
             dateModifiedDataGridViewTextBoxColumn.HeaderText = "Date Modified";
             dateModifiedDataGridViewTextBoxColumn.Name = "dateModifiedDataGridViewTextBoxColumn";
             dateModifiedDataGridViewTextBoxColumn.ReadOnly = true;
+            dateModifiedDataGridViewTextBoxColumn.Width = 107;
             // 
             // Edit
             // 
+            Edit.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             Edit.HeaderText = "Edit";
             Edit.Image = (Image)resources.GetObject("Edit.Image");
             Edit.Name = "Edit";
             Edit.ReadOnly = true;
             Edit.Resizable = DataGridViewTriState.True;
             Edit.SortMode = DataGridViewColumnSortMode.Automatic;
-            Edit.ToolTipText = "Edit the project name.";
+            Edit.Width = 52;
             // 
             // Delete
             // 
+            Delete.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             Delete.HeaderText = "Delete";
             Delete.Image = (Image)resources.GetObject("Delete.Image");
             Delete.Name = "Delete";
             Delete.ReadOnly = true;
             Delete.Resizable = DataGridViewTriState.True;
+            Delete.SortMode = DataGridViewColumnSortMode.Automatic;
+            Delete.Width = 65;
+            // 
+            // projectBindingSource1
+            // 
+            projectBindingSource1.DataSource = typeof(Entities.Project);
+            // 
+            // projectBindingSource
+            // 
+            projectBindingSource.DataSource = typeof(Entities.Project);
             // 
             // ProjectForm
             // 
@@ -130,6 +148,7 @@
             Text = "Waveform Generator";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewProjects).EndInit();
+            ((System.ComponentModel.ISupportInitialize)projectBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)projectBindingSource).EndInit();
             ResumeLayout(false);
         }
@@ -148,5 +167,6 @@
         private DataGridViewTextBoxColumn dateModifiedDataGridViewTextBoxColumn;
         private DataGridViewImageColumn Edit;
         private DataGridViewImageColumn Delete;
+        private BindingSource projectBindingSource1;
     }
 }

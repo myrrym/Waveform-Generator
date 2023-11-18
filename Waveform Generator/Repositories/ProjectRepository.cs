@@ -86,20 +86,60 @@ namespace Waveform_Generator.Repositories
         }
 
         // edit project name method
-        public void UpdateProjectName(Project updatedProjectName)
+        public bool UpdateProjectName(int ProjectId, string updatedProjectName)
         {
-            Project existingProjectName = projects.Find(p => p.ProjectId == updatedProjectName.ProjectId);
-            if (existingProjectName != null)
+            try
             {
-                existingProjectName.ProjectName = updatedProjectName.ProjectName;
-                existingProjectName.DateModified = DateTime.Now;
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string deleteQuery = "UPDATE projects SET project_name = @UpdatedProjectName, date_modified = CURRENT_TIMESTAMP WHERE project_id = @ProjectId"; // here myr
+                    using (MySqlCommand cmd = new MySqlCommand(deleteQuery, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@UpdatedProjectName", updatedProjectName);
+                        cmd.Parameters.AddWithValue("@ProjectId", ProjectId);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions (log, show error message, etc.)
+                Console.WriteLine($"Error: {ex.Message}");
+                return false;
             }
         }
 
         // delete project method
-        public void DeleteProject(int projectId)
+        public bool DeleteProject(int projectId)
         {
-            projects.RemoveAll(p => p.ProjectId == projectId);
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string deleteQuery = "DELETE FROM projects WHERE project_id = @ProjectId";
+                    using (MySqlCommand cmd = new MySqlCommand(deleteQuery, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@ProjectId", projectId);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions (log, show error message, etc.)
+                Console.WriteLine($"Error: {ex.Message}");
+                return false;
+            }
         }
     }
 }

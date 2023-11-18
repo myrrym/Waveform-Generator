@@ -39,9 +39,9 @@ namespace Waveform_Generator.Main
             var databaseManager = new DatabaseManager(configuration);
             string connectionString = databaseManager.GetConnectionString();
 
-            Application.Run(new Form1());
+            //Application.Run(new Form1());
 
-            //Application.Run(new ProjectForm(databaseManager));
+            Application.Run(new ProjectForm(databaseManager));
         }
     }
 }

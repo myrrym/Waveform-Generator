@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Waveform_Generator
 {
-    public partial class Form1 : Form
+    public partial class WaveformGeneratorForm : Form
     {
         Graphics graphic;
         Bitmap bitmap;
@@ -43,7 +43,7 @@ namespace Waveform_Generator
 
         private string importedFilePath;
 
-        public Form1()
+        public WaveformGeneratorForm()
         {
             InitializeComponent();
 

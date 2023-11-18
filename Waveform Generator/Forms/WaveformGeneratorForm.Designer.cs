@@ -1,6 +1,6 @@
 ﻿namespace Waveform_Generator
 {
-    partial class Form1
+    partial class WaveformGeneratorForm
     {
         /// <summary>
         /// Required designer variable.

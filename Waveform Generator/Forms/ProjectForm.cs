@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using Microsoft.Extensions.Configuration;
 using Waveform_Generator.Database;
+using MySqlX.XDevAPI.Relational;
 
 namespace Waveform_Generator
 {
@@ -56,6 +57,11 @@ namespace Waveform_Generator
                 if (success)
                 {
                     MessageBox.Show($"New project created: {projectName}", "Success");
+
+                    // Open Form1 after creating a new project
+                    WaveformGeneratorForm waveformGeneratorForm = new WaveformGeneratorForm();
+                    waveformGeneratorForm.Show();
+
                     // Reload projects view
                     LoadProjects();
                 }
@@ -70,26 +76,24 @@ namespace Waveform_Generator
             }
         }
 
-        // when update project name button is clicked
-        private void buttonUpdateProjectName_Click(object sender, DataGridViewCellEventArgs e)
+        // event handler for both update and delete buttons
+        private void dataGridViewProjects_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // the "Update" button is in the 2nd last column (index: Columns.Count - 2)
-            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridViewProjects.Columns.Count - 2)
+            // check if edit button is pressed
+            if (e.ColumnIndex == dataGridViewProjects.Columns["Edit"].Index && e.RowIndex >= 0)
             {
-                // Get the project name from the selected row
-                string projectName = dataGridViewProjects.Rows[e.RowIndex].Cells["ProjectName"].Value.ToString();
+                int projectId = (int)dataGridViewProjects.Rows[e.RowIndex].Cells["idDataGridViewTextBoxColumn"].Value;
 
-                // Prompt the user for the new project name
-                string updatedProjectName = Microsoft.VisualBasic.Interaction.InputBox($"Enter the new name for the project '{projectName}':", "Update Project Name");
+                // Prompt user for new project name
+                string updatedProjectName = Microsoft.VisualBasic.Interaction.InputBox($"Enter the new name for the project:", "Update Project Name");
 
-                // Check if the user entered a new project name
                 if (!string.IsNullOrWhiteSpace(updatedProjectName))
                 {
-                    // Create an instance of the Project class with the updated name
-                    Project updatedProject = new Project
-                    {
-                        ProjectName = updatedProjectName,
-                    };
+                    // Call a method to update the project name
+                    UpdateProjectName(projectId, updatedProjectName);
+
+                    // Refresh DataGridView
+                    LoadProjects();
                 }
                 else
                 {
@@ -97,20 +101,43 @@ namespace Waveform_Generator
                 }
             }
 
-            if (dataGridViewProjects.SelectedRows.Count > 0)
+            // Check if the clicked cell is in the delete button column and row is valid + Check if the clicked cell is in the delete column and not in the header row
+            if (e.ColumnIndex == dataGridViewProjects.Columns["Delete"].Index && e.RowIndex >= 0)
             {
-                LoadProjects();
+                // for debugging purposes
+                foreach (DataGridViewColumn column in dataGridViewProjects.Columns)
+                {
+                    System.Diagnostics.Debug.WriteLine("This is a debug message");
+                    System.Diagnostics.Debug.WriteLine(column.Name);
+                }
+
+                // Handle delete button click
+                int projectId = (int)dataGridViewProjects.Rows[e.RowIndex].Cells["idDataGridViewTextBoxColumn"].Value;
+
+                // Call a method to delete the project based on projectId
+                DeleteProject(projectId);
             }
         }
 
-        // when delete project button is clicked
-        private void buttonDeleteProject_Click(object sender, EventArgs e)
+        private void UpdateProjectName(int projectId, string updatedProjectName)
         {
-            if (dataGridViewProjects.SelectedRows.Count > 0)
+            // Call your ProjectRepository method to update the project name in the database
+            projectRepository.UpdateProjectName(projectId, updatedProjectName);
+        }
+
+        private void DeleteProject(int projectId)
+        {
+            bool success = projectRepository.DeleteProject(projectId);
+
+            if (success)
             {
-                int projectId = (int)dataGridViewProjects.SelectedRows[0].Cells["Id"].Value;
-                projectRepository.DeleteProject(projectId);
+                MessageBox.Show($"Project deleted successfully.", "Success");
+                // Reload projects view
                 LoadProjects();
+            }
+            else
+            {
+                MessageBox.Show("Failed to delete the project.", "Error");
             }
         }
 
