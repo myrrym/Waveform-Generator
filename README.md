@@ -12,5 +12,5 @@ Waveform Generator is a user-friendly C# application designed for crafting and m
 ## Acknowledgments
 
 Thanks to Usains' Train&Place programme for providing this opportunity for us to explore the C# .NET framework.
-Project management module - @myrrym
-Waveform generation module - @chunkeat123
+- Project management module - @myrrym
+- Waveform generation module - @chunkeat123
