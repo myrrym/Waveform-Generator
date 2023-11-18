@@ -84,7 +84,6 @@ C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Gene
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.csproj.AssemblyReference.cache
-C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform_Generator.Form1.resources
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform_Generator.ProjectForm.resources
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.csproj.GenerateResource.cache
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.GeneratedMSBuildEditorConfig.editorconfig
@@ -106,3 +105,4 @@ C:\Users\lux\Desktop\maomao stuff\222222 work\trainplace\capstone\capstone proje
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\appsettings.json
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform_Generator.WaveformGeneratorForm.resources

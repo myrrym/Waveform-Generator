@@ -16,7 +16,7 @@ namespace Waveform_Generator.Main
         [STAThread]
         static void Main()
         {
-            Application.Run(new Form1());
+            Application.Run(new WaveformGeneratorForm());
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
