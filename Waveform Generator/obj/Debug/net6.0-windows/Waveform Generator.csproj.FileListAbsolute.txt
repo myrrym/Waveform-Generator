@@ -55,7 +55,6 @@ C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Gene
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Waveform Generator.runtimeconfig.json
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Waveform Generator.dll
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Waveform Generator.pdb
-<<<<<<< HEAD
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\BouncyCastle.Cryptography.dll
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Google.Protobuf.dll
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
@@ -90,29 +89,21 @@ C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Gene
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.csproj.AssemblyReference.cache
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform_Generator.Form1.resources
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform_Generator.ProjectForm.resources
-=======
-C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.csproj.AssemblyReference.cache
-C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform_Generator.Form1.resources
->>>>>>> ChunKeat
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.csproj.GenerateResource.cache
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.AssemblyInfoInputs.cache
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.AssemblyInfo.cs
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.csproj.CoreCompileInputs.cache
-<<<<<<< HEAD
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.csproj.CopyComplete
-=======
->>>>>>> ChunKeat
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.dll
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\refint\Waveform Generator.dll
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.pdb
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform Generator.genruntimeconfig.cache
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\ref\Waveform Generator.dll
-<<<<<<< HEAD
 C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\obj\Debug\net6.0-windows\Waveform_Generator.Properties.Resources.resources
 C:\Users\lux\Desktop\maomao stuff\222222 work\trainplace\capstone\capstone project\Waveform Generator\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\lux\Desktop\maomao stuff\222222 work\trainplace\capstone\capstone project\Waveform Generator\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\lux\Desktop\maomao stuff\222222 work\trainplace\capstone\capstone project\Waveform Generator\obj\Debug\net6.0-windows\Waveform_Generator.Form1.resources
 C:\Users\lux\Desktop\maomao stuff\222222 work\trainplace\capstone\capstone project\Waveform Generator\obj\Debug\net6.0-windows\Waveform_Generator.Properties.Resources.resources
-=======
->>>>>>> ChunKeat
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\DELL\Documents\DreamCatcher\Capstone Project\WholeProject\Waveform-Generator\Waveform Generator\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
