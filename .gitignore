@@ -61,3 +61,4 @@ __pycache__/
 node_modules/
 
 # Add other project-specific or personal ignores here
+appsettings.json
