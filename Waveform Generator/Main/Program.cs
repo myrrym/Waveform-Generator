@@ -16,6 +16,7 @@ namespace Waveform_Generator.Main
         [STAThread]
         static void Main()
         {
+            Application.Run(new Form1());
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
@@ -39,9 +40,9 @@ namespace Waveform_Generator.Main
             var databaseManager = new DatabaseManager(configuration);
             string connectionString = databaseManager.GetConnectionString();
 
-            //Application.Run(new Form1());
+            
 
-            Application.Run(new ProjectForm(databaseManager));
+            //Application.Run(new ProjectForm(databaseManager));
         }
     }
 }

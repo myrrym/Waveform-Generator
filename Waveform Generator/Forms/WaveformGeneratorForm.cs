@@ -36,7 +36,6 @@ namespace Waveform_Generator
         List<PointF> LastSamplingList = new List<PointF>();
 
         private List<PointF> recordedData = new List<PointF>();
-
         private List<PointF> importedData;
 
         bool Screen_Full = false;
